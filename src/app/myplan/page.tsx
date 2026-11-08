@@ -76,7 +76,7 @@ const MyPlan = () => {
             checked={activeTab === "addTab"}
             onChange={() => setActiveTab("addTab")}
           />
-          <div className="tab-content border-base-300 p-10">
+          <div className="tab-content  p-10">
             {addButton.length > 0 ? (
               sortedAddButtonWorks.map((work: IWorkout, ind: number) => {
                 return <AddAndSaveTabs key={ind} work={work} />;
@@ -94,7 +94,7 @@ const MyPlan = () => {
             checked={activeTab === "saveTab"}
             onChange={() => setActiveTab("saveTab")}
           />
-          <div className="tab-content border-base-300  p-10">
+          <div className="tab-content   p-10">
             {saveButton.length > 0 ? (
               sortedSaveButtonWorks.map((work: IWorkout, ind: number) => {
                 return <AddAndSaveTabs key={ind} work={work} />;
