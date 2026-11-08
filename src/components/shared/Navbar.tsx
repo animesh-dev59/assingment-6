@@ -1,9 +1,12 @@
+'use client'
 import Image from "next/image";
-import React from "react";
+import React, { useContext } from "react";
 import Logo from "@/assets/logo.png";
 import Link from "next/link";
+import { WorksContext } from "@/context/WorksProvider";
 
 const Navbar = () => {
+  const {countPlan} =useContext(WorksContext);
   return (
     <div className="bg-[#08090a] border-b border-white/5">
       <div className="navbar container mx-auto px-4">
@@ -40,6 +43,9 @@ const Navbar = () => {
               </li>
               <li>
                 <Link href={"/myplan"}>My Plan</Link>
+              </li> 
+              <li> 
+                <Link href={'/'}> Home </Link>
               </li>
             </ul>
           </div>
@@ -66,18 +72,21 @@ const Navbar = () => {
                 className="rounded-full px-4 py-1.5 font-medium text-gray-400 hover:bg-transparent hover:text-white"
               >
                 My Plan
-              </Link>
-            </li>
+              </Link> 
+            </li> 
+            <li className="text-white"> 
+                <Link href={'/'}> Home </Link>
+              </li>
           </ul>
         </div>
         <div className="navbar-end gap-5 text-sm">
           <Link
-            href={"/myplan"}
+            href={"/myplan"} 
             className="flex items-center gap-2 text-gray-200"
           >
             Plan
             <span className="grid h-5 min-w-5 place-items-center rounded-full bg-[#C2F800] px-1 text-xs font-bold text-black">
-              0
+              {countPlan}
             </span>
           </Link>
           <div className="flex items-center gap-2 text-gray-400">

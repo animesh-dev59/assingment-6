@@ -3,6 +3,8 @@ import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { FiCalendar, FiBookmark } from 'react-icons/fi';
 import { IWorkout } from '@/types/IWorkOut';
+import AddButton from '@/components/shared/AddButton';
+import SaveButton from '@/components/shared/SaveButton';
 
 interface IWorkViewDetailsPages {
   params: Promise<{ id: string }>;
@@ -94,12 +96,8 @@ const WorkViewDetailsPages = async ({ params }: IWorkViewDetailsPages) => {
             </ol>
 
             <div className="mt-8 flex flex-wrap gap-3">
-              <button className="btn border-none bg-[#C2F800] text-xs font-bold text-black hover:bg-[#d4ff33]">
-                <FiCalendar /> Add to today&apos;s plan
-              </button>
-              <button className="btn border border-white/20 bg-transparent text-xs font-medium text-white hover:border-[#C2F800]/50 hover:bg-transparent">
-                <FiBookmark /> Save for later
-              </button>
+              <AddButton work={work}/>
+              <SaveButton work={work}/>
             </div>
           </div>
         </div>
