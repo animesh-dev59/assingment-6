@@ -49,14 +49,14 @@ const MyPlan = () => {
             <div className="stat-title text-[11px] text-[#9CA3AF]">
               Exercises
             </div>
-            <div className="stat-value text-4xl text-[#C2F800]">
-              {countSum}
-            </div>
+            <div className="stat-value text-4xl text-[#C2F800]">{countSum}</div>
           </div>
 
           <div className="stat px-6 py-5">
             <div className="stat-title text-[11px] text-[#9CA3AF]">Minutes</div>
-            <div className="stat-value text-4xl text-white">{totalDutation}</div>
+            <div className="stat-value text-4xl text-white">
+              {totalDutation}
+            </div>
           </div>
 
           <div className="stat px-6 py-5">
@@ -68,13 +68,15 @@ const MyPlan = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-10 gap-4 ">
+      <div className="grid grid-cols-1 md:grid-cols-10 gap-4 bg-[#0f1115] rounded-4xl pt-5 mx-4 ">
         <div className="tabs tabs-border md:col-span-7">
           <input
             type="radio"
             name="my_tabs_2"
             className="tab text-yellow-500"
             aria-label="Today's Plan"
+            checked={activeTab === "addTab"}
+            onChange={() => setActiveTab("addTab")}
           />
           <div className="tab-content border-base-300 p-10">
             {addButton.length > 0 ? (
@@ -91,7 +93,8 @@ const MyPlan = () => {
             name="my_tabs_2"
             className="tab text-yellow-500"
             aria-label="Saved"
-            defaultChecked
+            checked={activeTab === "saveTab"}
+            onChange={() => setActiveTab("saveTab")}
           />
           <div className="tab-content border-base-300  p-10">
             {saveButton.length > 0 ? (
