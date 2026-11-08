@@ -21,8 +21,8 @@ const CardRemove = ({ work, type }: ICardRemove) => {
       setSaveButton((prev) => prev.filter((w) => w.id !== work.id));
       toast.success(`${work.name} removed from saved`);
     }
-  };
-
+  };  
+ 
   return (
     <button
       onClick={handleRemove}
