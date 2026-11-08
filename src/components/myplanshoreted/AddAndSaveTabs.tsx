@@ -4,6 +4,7 @@ import Link from 'next/link';
 import React from 'react';
 import { FaFire, FaRegStar } from 'react-icons/fa';
 import { FiCheck, FiClock, FiX } from 'react-icons/fi';
+import CardRemove from '../shared/CardRemove';
 
 const AddAndSaveTabs = ({work}:{work:IWorkout}) => {
   return (
@@ -49,12 +50,14 @@ const AddAndSaveTabs = ({work}:{work:IWorkout}) => {
         <button className="btn btn-sm rounded-full border-none bg-[#C2F800] text-xs font-bold text-black hover:bg-[#d4ff33]">
           <FiCheck /> Mark as Done
         </button>
-        <button
+          <CardRemove work={work}/>
+        {/* <button
           aria-label={`Remove ${work.name}`}
           className="text-[#9CA3AF] transition hover:text-white"
         >
           <FiX size={18} />
-        </button>
+        </button>  */}
+        
       </div>
     </div>
               </div>
