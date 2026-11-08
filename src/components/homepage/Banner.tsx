@@ -19,7 +19,6 @@ const Banner = () => {
             <h1 className="mt-4 text-4xl font-extrabold uppercase leading-tight text-white lg:text-[44px]">
               TRAIN WITH INTENT. LOG 
               EVERY SET.
-              +
             </h1>
             <p className="py-6 text-sm text-[#9CA3AF]">
               FitLog is a dark, no-nonsense gym companion: pick a lift, lock it
