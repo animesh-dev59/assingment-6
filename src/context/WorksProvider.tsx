@@ -25,9 +25,9 @@ const WorksProvider = ({children}:{children : ReactNode}) => {
   const [countSave,setCountSave] = useState<number>(0);
   const [countPlan,setCountPlan] = useState<number>(0);
   const [addButton,setAddButton] = useState<IWorkout[]>([]);
-  const [savedButton,setSaveButton]= useState<IWorkout[]>([]);  
+  const [saveButton,setSaveButton]= useState<IWorkout[]>([]);  
   const shereData ={   
-    countSave,setCountSave,countPlan,setCountPlan,addButton,setAddButton,savedButton,setSaveButton, 
+    countSave,setCountSave,countPlan,setCountPlan,addButton,setAddButton,saveButton,setSaveButton, 
   }
   return (<WorksContext.Provider value={shereData}> 
    {children}</WorksContext.Provider>

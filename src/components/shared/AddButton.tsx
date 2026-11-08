@@ -1,6 +1,7 @@
 'use client'
 import { WorksContext } from "@/context/WorksProvider";
 import { IWorkout } from "@/types/IWorkOut";
+import Link from "next/link";
 import React, { useContext } from "react";
 import { FiCalendar } from "react-icons/fi";
 import { toast } from "react-toastify";
@@ -14,11 +15,13 @@ const AddButton = ({work}:{work:IWorkout}) => {
   }
    
   return (
-    <button 
+  
+    <Link href={'/myplan'} 
     onClick={()=>handleButtonAdd()}  
      className="btn border-none bg-[#C2F800] text-xs font-bold text-black hover:bg-[#d4ff33]">
       <FiCalendar /> Add to today&apos;s plan
-    </button>
+    </Link>
+
   );
 };
 

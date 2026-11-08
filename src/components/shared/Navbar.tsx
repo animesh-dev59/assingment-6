@@ -6,7 +6,7 @@ import Link from "next/link";
 import { WorksContext } from "@/context/WorksProvider";
 
 const Navbar = () => {
-  const {countPlan} =useContext(WorksContext);
+  const {countPlan,countSave} =useContext(WorksContext);
   return (
     <div className="bg-[#08090a] border-b border-white/5">
       <div className="navbar container mx-auto px-4">
@@ -92,7 +92,7 @@ const Navbar = () => {
           <div className="flex items-center gap-2 text-gray-400">
             Saved
             <span className="grid h-5 min-w-5 place-items-center rounded-full bg-white/10 px-1 text-xs font-bold text-white">
-              0
+              {countSave}
             </span>
           </div>
         </div>
