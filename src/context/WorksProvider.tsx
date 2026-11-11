@@ -48,8 +48,6 @@ interface IWorksContext {
   setAddButton: Dispatch<SetStateAction<IWorkout[]>>;
   saveButton: IWorkout[];
   setSaveButton: Dispatch<SetStateAction<IWorkout[]>>;
-  removeFromAdd: (id: string | number) => void;
-  removeFromSave: (id: string | number) => void;
 }
 
 export const WorksContext = createContext<IWorksContext>({
@@ -61,8 +59,6 @@ export const WorksContext = createContext<IWorksContext>({
   setAddButton: () => {},
   saveButton: [],
   setSaveButton: () => {},
-  removeFromAdd: () => {},
-  removeFromSave: () => {},
 });
 
 const WorksProvider = ({ children }: { children: ReactNode }) => {
@@ -71,22 +67,12 @@ const WorksProvider = ({ children }: { children: ReactNode }) => {
   const [addButton, setAddButton] = useState<IWorkout[]>([]);
   const [saveButton, setSaveButton] = useState<IWorkout[]>([]);
 
-  const removeFromAdd = (id: string | number) => {
-    setAddButton((prev) => prev.filter((work) => work.id !== id));
-    setCountPlan((prev) => Math.max(0, prev - 1));
-  };
-
-  const removeFromSave = (id: string | number) => {
-    setSaveButton((prev) => prev.filter((work) => work.id !== id));
-    setCountSave((prev) => Math.max(0, prev - 1));
-  };
 
   const shereData = {
     countSave, setCountSave,
     countPlan, setCountPlan,
     addButton, setAddButton,
     saveButton, setSaveButton,
-    removeFromAdd, removeFromSave,
   };
 
   return (

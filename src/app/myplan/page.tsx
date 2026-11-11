@@ -79,7 +79,7 @@ const MyPlan = () => {
           <div className="tab-content  p-10">
             {addButton.length > 0 ? (
               sortedAddButtonWorks.map((work: IWorkout, ind: number) => {
-                return <AddAndSaveTabs key={ind} work={work} />;
+                return <AddAndSaveTabs  key={work.id} work={work} type="addTab" />;
               })
             ) : (
               <AddAndSvaeTabsNoDATa />
@@ -97,7 +97,7 @@ const MyPlan = () => {
           <div className="tab-content   p-10">
             {saveButton.length > 0 ? (
               sortedSaveButtonWorks.map((work: IWorkout, ind: number) => {
-                return <AddAndSaveTabs key={ind} work={work} />;
+                return <AddAndSaveTabs key={work.id} work={work} type="saveTab"/>;
               })
             ) : (
               <AddAndSvaeTabsNoDATa />
@@ -112,7 +112,7 @@ const MyPlan = () => {
                 e.target.value as "rating" | "duration" | "caloriesBurned",
               )
             }
-            className="select appearance-none mt-[34px] ml-8 bg-[#151922] text-amber-50"
+            className="select appearance-none mt-8 ml-8 bg-[#151922] text-amber-50"
           >
             <option disabled={true}>sortBy</option>
             <option value={"rating"}>rating</option>

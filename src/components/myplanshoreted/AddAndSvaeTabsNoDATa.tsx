@@ -4,7 +4,7 @@ import React from 'react';
 const AddAndSvaeTabsNoDATa = () => {
   return (
     <div>
-      <div className="flex min-h-[170px] flex-col items-center justify-center rounded-2xl border border-white/5 bg-[#0a0a0a] px-4 py-12 text-center">
+      <div className="flex min-h-\[170px\] flex-col items-center justify-center rounded-2xl border border-white/5 bg-[#0a0a0a] px-4 py-12 text-center">
                   <h3
                     className={` text-lg font-bold uppercase tracking-wide text-white`}
                   >

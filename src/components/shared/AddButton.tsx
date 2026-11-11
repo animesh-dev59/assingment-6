@@ -16,11 +16,11 @@ const AddButton = ({work}:{work:IWorkout}) => {
    
   return (
   
-    <Link href={'/myplan'} 
+    <button
     onClick={()=>handleButtonAdd()}  
      className="btn border-none bg-[#C2F800] text-xs font-bold text-black hover:bg-[#d4ff33]">
       <FiCalendar /> Add to today&apos;s plan
-    </Link>
+    </button>
 
   );
 };

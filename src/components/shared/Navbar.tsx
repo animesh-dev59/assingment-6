@@ -89,12 +89,13 @@ const Navbar = () => {
               {countPlan}
             </span>
           </Link>
+          <Link href={'/myplan'}>  
           <div className="flex items-center gap-2 text-gray-400">
             Saved
             <span className="grid h-5 min-w-5 place-items-center rounded-full bg-white/10 px-1 text-xs font-bold text-white">
               {countSave}
             </span>
-          </div>
+          </div> </Link>
         </div>
       </div>
     </div>

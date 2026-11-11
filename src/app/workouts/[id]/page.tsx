@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
-import { FiCalendar, FiBookmark } from 'react-icons/fi';
+// import { FiCalendar, FiBookmark } from 'react-icons/fi';
 import { IWorkout } from '@/types/IWorkOut';
 import AddButton from '@/components/shared/AddButton';
 import SaveButton from '@/components/shared/SaveButton';

@@ -14,12 +14,11 @@ const SaveButton = ({work}:{work:IWorkout}) => {
       toast.success(`You have add ${work.name}`);
     }
   return (  
-    <Link  
-    href={`/myplan`}
+    <button
     onClick={()=>handleButtonSave()} 
      className="btn border border-white/20 bg-transparent text-xs font-medium text-white hover:border-[#C2F800]/50 hover:bg-transparent">
       <FiBookmark /> Save for later
-    </Link>
+    </button>
   );
 };
 
