@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import { FaFire, FaRegStar } from 'react-icons/fa';
-import { FiCheck, FiClock, FiX } from 'react-icons/fi';
+import { FiCheck, FiClock } from 'react-icons/fi';
 import CardRemove from '../shared/CardRemove';
 
 const AddAndSaveTabs = ({work}:{work:IWorkout}) => {
