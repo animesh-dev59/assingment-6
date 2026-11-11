@@ -78,7 +78,7 @@ const MyPlan = () => {
           />
           <div className="tab-content  p-10">
             {addButton.length > 0 ? (
-              sortedAddButtonWorks.map((work: IWorkout, ind: number) => {
+              sortedAddButtonWorks.map((work: IWorkout) => {
                 return <AddAndSaveTabs  key={work.id} work={work} type="addTab" />;
               })
             ) : (
@@ -96,7 +96,7 @@ const MyPlan = () => {
           />
           <div className="tab-content   p-10">
             {saveButton.length > 0 ? (
-              sortedSaveButtonWorks.map((work: IWorkout, ind: number) => {
+              sortedSaveButtonWorks.map((work: IWorkout) => {
                 return <AddAndSaveTabs key={work.id} work={work} type="saveTab"/>;
               })
             ) : (
