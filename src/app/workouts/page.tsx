@@ -2,7 +2,7 @@ import WorkOutsTitle from "@/components/shared/WorkOutsTitle";
 import { IWorkout } from "@/types/IWorkOut";
 import React from "react";
 import WorkCard from "@/components/shared/WorkCard";
- const getWorkOuts = async (): Promise<IWorkout[]> => {
+ export const getWorkOuts = async (): Promise<IWorkout[]> => {
   // const res = await fetch("https://api.abcz.workers.dev/api/fitlog");
   const API = process.env.NEXT_PUBLIC_API_URL as string;
   const res = await fetch(API);

@@ -5,17 +5,18 @@ import { notFound } from 'next/navigation';
 import { IWorkout } from '@/types/IWorkOut';
 import AddButton from '@/components/shared/AddButton';
 import SaveButton from '@/components/shared/SaveButton';
+import { getWorkOuts } from '../page';
 
 interface IWorkViewDetailsPages {
   params: Promise<{ id: string }>;
 }
 
-const getWorkOuts = async (): Promise<IWorkout[]> => {
-  const API = process.env.NEXT_PUBLIC_API_URL as string;
-  const res = await fetch(API);
-  if (!res.ok) throw new Error('Failed to fetch workouts');
-  return res.json();
-};
+// const getWorkOuts = async (): Promise<IWorkout[]> => {
+//   const API = process.env.NEXT_PUBLIC_API_URL as string;
+//   const res = await fetch(API);
+//   if (!res.ok) throw new Error('Failed to fetch workouts');
+//   return res.json();
+// };
 
 const WorkViewDetailsPages = async ({ params }: IWorkViewDetailsPages) => {
   const { id } = await params;
