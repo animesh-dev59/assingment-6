@@ -50,7 +50,7 @@ const AddAndSaveTabs = ({work}:{work:IWorkout}) => {
         <button className="btn btn-sm rounded-full border-none bg-[#C2F800] text-xs font-bold text-black hover:bg-[#d4ff33]">
           <FiCheck /> Mark as Done
         </button>
-          <CardRemove work={work}/>
+          <CardRemove/>
         {/* <button
           aria-label={`Remove ${work.name}`}
           className="text-[#9CA3AF] transition hover:text-white"
